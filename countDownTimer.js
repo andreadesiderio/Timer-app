@@ -1,5 +1,7 @@
 "use strict"
 
+window.addEventListener('load', preSetTimer);
+
 const button = document.getElementById("submit");
 button.addEventListener('click', setTimer);
 

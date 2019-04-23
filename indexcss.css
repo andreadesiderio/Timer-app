@@ -1,0 +1,12 @@
+
+.inlineBlock{
+    display: inline-block;
+}
+
+nav {
+    position: fixed;
+}
+
+ul{
+    list-style: none;
+}

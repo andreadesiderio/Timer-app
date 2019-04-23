@@ -6,11 +6,37 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="decsriptiom" content="timer app">
             <title>Timer App</title>
+            <link href="indexcss.css" rel="stylesheet" type="text/css">
+
+
     </head>
-<body onload="preSetTimer()">
-<h1>Timer App</h1>
+<body>
+<header role="heading">
+    <nav role="navigation">
+        <div class="inlineBlock" id="BrandNameContainer">
+         <h1>Time App</h1>
+         </div>
+        <div  class="inlineBlock id="menuContainer">
+         <ul class="inlineBlock"> 
+            <li class="inlineBlock">
+                <a href="#">World Clock</a>
+            </li>
+            <li class="inlineBlock">
+                <a href="#">Timer</a>
+            </li>
+            <li class="inlineBlock">
+                <a href="#">Stopwatch</a>
+            </li>
+            <li class="inlineBlock">
+                <a href="#">Alarm</a>
+            </li>    
+         </ul>
+        </div>
+    </nav>
+</header>
 
-
+<div id="countDownTimerContainer">    
+<h2>Timer</h2>
 <div id=countdownContainer>
 <label for="day">Day:</label>
 <select id="day">
@@ -81,6 +107,7 @@
 <input type="button" id="submit" value="submit">
 </div>
 <p id="timerValue"></p>
+</div>
 </body>
 <script type="text/javascript" src="countDownTimer.js" ></script>
 

@@ -1,10 +1,7 @@
 "use strict"
 
-<<<<<<< HEAD
-=======
 window.addEventListener('load', preSetTimer);
 
->>>>>>> ranch
 const button = document.getElementById("submit");
 button.addEventListener('click', setTimer);
 

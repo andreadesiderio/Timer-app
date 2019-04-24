@@ -40,15 +40,20 @@ padding-right: 15px;
 font-size: 20px;
 }
 
+.menuItem::after{
+    content: "|";
+    padding: 5px;
+}
+
 a{
     text-decoration: none;
     padding-right: 5px;
   }
 
-  a::after{
+  /* a::after{
     padding: 5px;
-    content: "|";
-}  
+
+}   */
 
 
 a:hover{

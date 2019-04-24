@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="decsriptiom" content="timer app">
+            <title>Timer App | Count Down Timer</title>
+            
+            <link href="resetCss.css" rel="stylesheet" type="text/css">
+            <link href="indexcss.css" rel="stylesheet" type="text/css">
+
+
+    </head>
+<body>
+<header role="heading">
+    <nav role="navigation">
+        <div class="inlineBlock" id="brandNameContainer">
+         <h1 class="whiteText">Time App</h1>
+         </div>
+        <div  class="inlineBlock menuContainer">
+         <ul class="inlineBlock menu"> 
+            <li class="inlineBlock menuItem">
+                <a href="#" class="whiteText">World Clock</a>
+            </li>
+            <li class="inlineBlock">
+                <a href="countDownTimer.html" class="menuItem whiteText">Timer</a>
+            </li>
+            <li class="inlineBlock">
+                <a href="#" class="menuItem whiteText">Stopwatch</a>
+            </li>
+            <li class="inlineBlock">
+                <a href="#" class="menuItem whiteText">Alarm</a>
+            </li>    
+         </ul>
+        </div>
+    </nav>
+</header>
+<main role="main">
+
+<div id="countDownTimerContainer">    
+    <h2>Timer</h2>
+    <div id="selectionContainer">
+    <label for="day">Day:</label>
+    <select id="day">
+    <option class="dayOption" value="1">1</option>
+    <option class="dayOption" value="2">2</option>
+    <option class="dayOption" value="3">3</option>
+    <option class="dayOption" value="4">4</option>
+    <option class="dayOption" value="5">5</option>
+    <option class="dayOption" value="6">6</option>
+    <option class="dayOption" value="7">7</option>
+    <option class="dayOption" value="8">8</option>
+    <option class="dayOption" value="9">9</option>
+    <option class="dayOption" value="10">10</option>
+    <option class="dayOption" value="11">11</option>
+    <option class="dayOption" value="12">12</option>
+    <option class="dayOption" value="13">13</option>
+    <option class="dayOption" value="14">14</option>
+    <option class="dayOption" value="15">15</option>
+    <option class="dayOption" value="16">16</option>
+    <option class="dayOption" value="17">17</option>
+    <option class="dayOption" value="18">18</option>
+    <option class="dayOption" value="19">19</option>
+    <option class="dayOption" value="20">20</option>
+    <option class="dayOption" value="21">21</option>
+    <option class="dayOption" value="22">22</option>
+    <option class="dayOption" value="23">23</option>
+    <option class="dayOption" value="24">24</option>
+    <option class="dayOption" value="25">25</option>
+    <option class="dayOption" value="26">26</option>
+    <option class="dayOption" value="27">27</option>
+    <option class="dayOption" value="28">28</option>
+    <option class="dayOption" value="29">29</option>
+    <option class="dayOption" value="30">30</option>
+    <option class="dayOption" value="31">31</option>
+    </select>
+    
+    <label for="month">Month:</label>
+    <select id="month">
+        <option class="monthOption" value='0'>Janurary</option>
+        <option class="monthOption" value="1">February</option>
+        <option class="monthOption" value="2">March</option>
+        <option class="monthOption" value="3">April</option>
+        <option class="monthOption" value="4">May</option>
+        <option class="monthOption" value="5">June</option>
+        <option class="monthOption" value="6">July</option>
+        <option class="monthOption" value="7">August</option>
+        <option class="monthOption" value="8">October</option>
+        <option class="monthOption" value="9">September</option>
+        <option class="monthOption" value="10">November</option>
+        <option class="monthOption" value="11">December</option>
+    </select>
+    
+    <label for="year">Year:</label>
+    <select id="year">
+    <option class="yearOption" value="2019">2019</option>
+    <option class="yearOption" value="2020">2020</option>
+    <option class="yearOption" value="2021">2021</option>
+    <option class="yearOption" value="2022">2022</option>
+    <option class="yearOption" value="2023">2023</option>
+    </select>
+    
+    <label for="hour">Hour:</label>
+    <input type="text" id="hour" placeholder="hour">
+    <label for="minute">Minute:</label>
+    <input type="text" id="minute" placeholder="minute">
+    <label for="second">Second:</label> 
+    <input type="text" id="second" placeholder="second"> 
+    <input type="button" id="submit" value="submit">
+    </div>
+    <p id="timerValue"></p>
+    </div>
+
+</main>
+</body>
+<script type="text/javascript" src="countDownTimer.js" ></script>
+
+</html>

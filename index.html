@@ -6,6 +6,8 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="decsriptiom" content="timer app">
             <title>Timer App</title>
+            
+            <link href="resetCss.css" rel="stylesheet" type="text/css">
             <link href="indexcss.css" rel="stylesheet" type="text/css">
 
 
@@ -13,28 +15,28 @@
 <body>
 <header role="heading">
     <nav role="navigation">
-        <div class="inlineBlock" id="BrandNameContainer">
-         <h1>Time App</h1>
+        <div class="inlineBlock" id="brandNameContainer">
+         <h1 class="whiteText">Time App</h1>
          </div>
-        <div  class="inlineBlock id="menuContainer">
-         <ul class="inlineBlock"> 
-            <li class="inlineBlock">
-                <a href="#">World Clock</a>
+        <div  class="inlineBlock menuContainer">
+         <ul class="inlineBlock menu"> 
+            <li class="inlineBlock menuItem">
+                <a href="#" class="whiteText">World Clock</a>
             </li>
             <li class="inlineBlock">
-                <a href="#">Timer</a>
+                <a href="#" class="menuItem whiteText">Timer</a>
             </li>
             <li class="inlineBlock">
-                <a href="#">Stopwatch</a>
+                <a href="#" class="menuItem whiteText">Stopwatch</a>
             </li>
             <li class="inlineBlock">
-                <a href="#">Alarm</a>
+                <a href="#" class="menuItem whiteText">Alarm</a>
             </li>    
          </ul>
         </div>
     </nav>
 </header>
-
+<main role="main">
 <div id="countDownTimerContainer">    
 <h2>Timer</h2>
 <div id=countdownContainer>
@@ -108,6 +110,7 @@
 </div>
 <p id="timerValue"></p>
 </div>
+</main>
 </body>
 <script type="text/javascript" src="countDownTimer.js" ></script>
 

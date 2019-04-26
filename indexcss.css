@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    /* text-align: center; */
 }
 
 /* body{
@@ -13,7 +14,9 @@
 .whiteText{
     color: white;
 }
-
+.centerText{
+    text-align: center;
+}
 nav {
     position: fixed;
     background-color: rgba(0, 0, 3);
@@ -63,4 +66,44 @@ a:hover{
 main{
     position: relative;
     top: 100px;
+}
+
+.rotatingClock{
+    height: 520px;
+    width: 520px;
+    background: radial-gradient(white, black);
+    border: 10px solid black;
+    border-radius: 50%;
+    /* display: inline-block; */
+    margin: auto;
+    padding: 20px;
+}
+
+.secondNeedle{
+    width: 2px;
+    height: 250px;
+    background: radial-gradient(black, red);
+    /* border-radius: 10px; */
+    position: relative;
+    left: 229px;
+
+}
+
+.minuteNeedle{
+    width: 5px;
+    height: 250px;
+    background: radial-gradient(black, blue);
+    position: relative;
+    left: 227px;
+    top: -250px;
+    
+}
+
+.hourNeedle{
+    width: 5px;
+    height: 125px;
+    background: yellow;
+    position: relative;
+    left: 227px;
+    top: -375px; 
 }

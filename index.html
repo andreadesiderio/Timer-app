@@ -7,13 +7,13 @@
             <meta name="decsriptiom" content="timer app">
             <title>Time App</title>
             
-            <link href="resetCss.css" rel="stylesheet" type="text/css">
+            <!-- <link href="resetCss.css" rel="stylesheet" type="text/css"> -->
             <link href="indexcss.css" rel="stylesheet" type="text/css">
 
 
     </head>
 <body>
-<header role="heading">
+<!-- <header role="heading">
     <nav role="navigation">
         <div class="inlineBlock" id="brandNameContainer">
          <h1><a href="index.html" class="whiteText">Time App</a></h1>
@@ -35,30 +35,35 @@
          </ul>
         </div>
     </nav>
-</header>
+</header> -->
 <main role="main">
 
 <!-- <p id="homeDate"></p>
 <p id="homeClock"></p> -->
 
-<div class="centerText">
-        <!-- id="homeClock" -->
-<div class="rotatingClock centerText inlineBlock"> 
-    <div class="secondNeedle">
-
+<div class="analogClock">
+    <div>
+        <div class="analogClockDate"></div>
+        <div class="analogClockDay"></div>
     </div>
-    <div class="minuteNeedle">
-
+    <div class="dot"></div>
+    <div>
+        <div class="hourHand"></div>
+        <div class="minuteHand"></div>
+        <div class="secondHand"></div>
+    </div> 
+    <div>
+        <span class="hour3">3</span>
+        <span class="hour6">6</span>
+        <span class="hour9">9</span>
+        <span class="hour12">12</span>
     </div>
-    <div class="hourNeedle">
-
-    </div>
-</div>
+    <div class="diallines"></div>
 </div>
 
 </main>
 </body>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="script.js"></script> 
 <script type="text/javascript" src="countDownTimer.js" ></script>
 
 </html>

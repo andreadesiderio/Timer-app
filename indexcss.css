@@ -1,12 +1,11 @@
-*{
+/* /* *{
     box-sizing: border-box;
-    /* text-align: center; */
-}
+} */
 
 /* body{
     margin: 0;
 } */
-
+/*
 .inlineBlock{
     display: inline-block;
 }
@@ -58,7 +57,7 @@ a{
 
 }   */
 
-
+/*
 a:hover{
     color : rgb(42, 42, 252);
 }
@@ -66,44 +65,180 @@ a:hover{
 main{
     position: relative;
     top: 100px;
-}
+} */
 
-.rotatingClock{
-    height: 520px;
-    width: 520px;
-    background: radial-gradient(white, black);
-    border: 10px solid black;
+.analogClock{
+    background-color: azure;
+    width: 300px;
+    height: 300px;
+    margin: 8% auto 0;
+    /* margin: auto; */
     border-radius: 50%;
-    /* display: inline-block; */
+    border: 14px solid black;
+    position: relative;
+    box-shadow: 0 2vw 4vw -1vw rgba(0, 0, 0, 0.8);
+}
+
+.dot{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ccc;
+    /* my first try
+    position: relative; 
     margin: auto;
-    padding: 20px;
+    top: 243px;*/
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin: auto; 
+    z-index: 10;
+    box-shadow: 0 2px 4px -1px black;
 }
 
-.secondNeedle{
-    width: 2px;
-    height: 250px;
-    background: radial-gradient(black, red);
-    /* border-radius: 10px; */
-    position: relative;
-    left: 229px;
-
-}
-
-.minuteNeedle{
-    width: 5px;
-    height: 250px;
-    background: radial-gradient(black, blue);
-    position: relative;
-    left: 227px;
-    top: -250px;
-    
-}
-
-.hourNeedle{
-    width: 5px;
-    height: 125px;
+.hourHand{
+    position: absolute;
+    z-index: 5;
+    width: 4px;
+    height: 65px;
     background: yellow;
-    position: relative;
-    left: 227px;
-    top: -375px; 
+    top: 79px;
+    /* left: 239px; */
+    left: 50%;
+    /*half or the width*/
+    margin-left: -2px;
+    /*is this neccessary? not doing anything*/
+    transform-origin: 50% 72px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.minuteHand{
+    position: absolute;
+    z-index: 6;
+    width: 4px;
+    height: 100px;
+    background: black;
+    top: 46px;
+    left: 50%;
+    margin-left: -2px;
+    /*is this neccessary? not doing anything*/
+    transform-origin: 50% 105px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.secondHand{
+    position: absolute;
+    z-index: 7;
+    width: 2px;
+    height: 120px;
+    background: red;
+    top: 26px;
+    /* left: 239px; */
+    left: 50%;
+    margin-left: -1px;
+    /*is this neccessary? not doing anything*/
+    transform-origin: 50% 125px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+
+span{
+    display: inline-block;
+    position: absolute;
+    font-size: 22px;
+    font-weight: 700;
+    z-index: 4;
+}
+
+.hour12{
+    top:30px;
+    left: 50%;
+    margin-left: -9px;
+}
+
+.hour6{
+    bottom:30px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.hour3{
+    /* bottom:50%;
+    left: 95%; */
+    top: 140px;
+    right: 30px;
+}
+
+.hour9{
+    /* bottom:50%;
+    left: 10px; */
+    left: 32px;
+    top: 140px;
+}
+
+.diallines{
+    position: absolute;
+    z-index: 2;
+    width: 2px;
+    height: 15px;
+    background: #666;
+    left: 50%;
+    margin-left: -1px;
+    transform-origin: 50% 150px;
+}
+
+.diallines:nth-of-type(5n){
+    position: absolute;
+    z-index: 2;
+    width: 4px;
+    height: 25px;
+    background: #666;
+    left: 50%;
+    margin-left: -1px;
+    transform-origin: 50% 150px;
+}
+
+.analogClockDate{
+    position: absolute;
+    z-index: 3;
+    width: 120px;
+    height: 20px;
+    border-radius: 7px;
+    background: #888;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-size: 11px;
+    top: 80px;
+    left: 50%;
+    /* top: 25%;
+    left: 50%; */
+    margin-left: -60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.analogClockDay{
+    position: absolute;
+    z-index: 3;
+    width: 120px;
+    height: 25px;
+    border-radius: 7px;
+    background: #888;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-size: 11px;
+    top: 200px;
+    left: 50%;
+    /* top: 75%;
+    left: 50%; */
+    margin-left: -60px;
+    font-weight: 700;
+    letter-spacing: 3px;
 }

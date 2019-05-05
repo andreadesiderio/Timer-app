@@ -29,7 +29,7 @@ function runClock(){
     second = date.getSeconds(),
     currentDate = date.getDate(),
     month = date.getMonth() + 1,
-    year = date.getYear(),
+    year = date.getFullYear(),
 
     hDeg = hour * 30 + minute * (360 / 720),
     mDeg = minute * 30 + second * (360 / 720),

@@ -30,9 +30,10 @@ function runClock(){
     currentDate = date.getDate(),
     month = date.getMonth() + 1,
     year = date.getFullYear(),
-
-    hDeg = hour * 30 + minute * (360 / 720),
-    mDeg = minute * 30 + second * (360 / 720),
+    //this is to get 360deg rotation... hour(12hours)*30=360
+    hDeg = (hour * 30) + (minute / 2),
+    // minute goes to 60 and 60*6 gets a 360 rotaion
+    mDeg = minute * 6,
     sDeg = second * 6,
 
     hourHand = document.querySelector(".hourHand"),
@@ -41,19 +42,19 @@ function runClock(){
     analogDate = document.querySelector(".analogClockDate"),
     analogDay = document.querySelector(".analogClockDay");
 
-     weekdays[0] = "Sunday";
-     weekdays[1] = "Monday";
-     weekdays[2] = "Tuesday";
-     weekdays[3] = "Wednesday";
-     weekdays[4] = "Thursday";
-     weekdays[5] = "Friday";
-     weekdays[6] = "Saturday";
-    
-    let day = weekdays[date.getDay()];
-
     hourHand.style.transform = "rotate(" + hDeg + "deg)";
     minuteHand.style.transform = "rotate(" + mDeg + "deg)";
     secondHand.style.transform = "rotate(" + sDeg + "deg)";
+
+    weekdays[0] = "Sunday";
+    weekdays[1] = "Monday";
+    weekdays[2] = "Tuesday";
+    weekdays[3] = "Wednesday";
+    weekdays[4] = "Thursday";
+    weekdays[5] = "Friday";
+    weekdays[6] = "Saturday";
+   
+   let day = weekdays[date.getDay()];
 
     analogDate.innerHTML = currentDate + " / " + month +  " / "  + year ;
     analogDay.innerHTML = day; 

@@ -1,11 +1,8 @@
-/* /* *{
+*{
     box-sizing: border-box;
-} */
+} 
 
-/* body{
-    margin: 0;
-} */
-/*
+
 .inlineBlock{
     display: inline-block;
 }
@@ -18,6 +15,7 @@
 }
 nav {
     position: fixed;
+    top:0;
     background-color: rgba(0, 0, 3);
     width: 100%;
     padding: 10px 20px;
@@ -52,12 +50,12 @@ a{
     padding-right: 5px;
   }
 
-  /* a::after{
+a::after{
     padding: 5px;
 
-}   */
+}  
 
-/*
+
 a:hover{
     color : rgb(42, 42, 252);
 }
@@ -65,16 +63,15 @@ a:hover{
 main{
     position: relative;
     top: 100px;
-} */
+} 
 
 .analogClock{
     background-color: azure;
-    width: 300px;
-    height: 300px;
-    margin: 8% auto 0;
-    /* margin: auto; */
+    width: 350px;
+    height: 350px;
+    margin: 8% auto; 
     border-radius: 50%;
-    border: 14px solid black;
+    border: 10px solid black;
     position: relative;
     box-shadow: 0 2vw 4vw -1vw rgba(0, 0, 0, 0.8);
 }
@@ -84,10 +81,6 @@ main{
     height: 14px;
     border-radius: 50%;
     background-color: #ccc;
-    /* my first try
-    position: relative; 
-    margin: auto;
-    top: 243px;*/
     position: absolute;
     top:0;
     left:0;
@@ -98,52 +91,48 @@ main{
     box-shadow: 0 2px 4px -1px black;
 }
 
-.hourHand{
+.clockHand{
     position: absolute;
-    z-index: 5;
-    width: 4px;
-    height: 65px;
-    background: yellow;
-    top: 79px;
-    /* left: 239px; */
-    left: 50%;
-    /*half or the width*/
-    margin-left: -2px;
-    /*is this neccessary? not doing anything*/
-    transform-origin: 50% 72px;
+    /* transform-origin:50% 95%; */
+    /* transform: rotate(45deg) translate(-20px, 20px); */
+    /* transform: translatex(-10px);  */
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
 }
 
-.minuteHand{
-    position: absolute;
-    z-index: 6;
+.hourHand{
+    z-index: 8; 
     width: 4px;
-    height: 100px;
-    background: black;
+    height: 95px;
+    background: yellow;
+    top: 90px;
+    text-align: center;
+    left: 50%;
+    /*half of the width*/
+    margin-left: -2px; 
+    transform-origin:50% 75px;
+} 
+
+ .minuteHand{
+    z-index: 7;
+    width: 4px;
+    height: 140px;
+    background: green;
     top: 46px;
     left: 50%;
     margin-left: -2px;
-    /*is this neccessary? not doing anything*/
-    transform-origin: 50% 105px;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-}
+    transform-origin:50% 120px;
+}  
 
-.secondHand{
-    position: absolute;
+ .secondHand{
     z-index: 7;
     width: 2px;
-    height: 120px;
+    height: 180px;
     background: red;
-    top: 26px;
-    /* left: 239px; */
+    top: 6px;
     left: 50%;
-    margin-left: -1px;
-    /*is this neccessary? not doing anything*/
-    transform-origin: 50% 125px;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
+    margin-left: -1px; 
+    transform-origin:50% 160px;
 }
 
 
@@ -168,20 +157,16 @@ span{
 }
 
 .hour3{
-    /* bottom:50%;
-    left: 95%; */
     top: 140px;
     right: 30px;
 }
 
 .hour9{
-    /* bottom:50%;
-    left: 10px; */
     left: 32px;
     top: 140px;
 }
 
-.diallines{
+/* .diallines{
     position: absolute;
     z-index: 2;
     width: 2px;
@@ -190,9 +175,9 @@ span{
     left: 50%;
     margin-left: -1px;
     transform-origin: 50% 150px;
-}
+} */
 
-.diallines:nth-of-type(5n){
+/* .diallines:nth-of-type(5n){
     position: absolute;
     z-index: 2;
     width: 4px;
@@ -201,9 +186,9 @@ span{
     left: 50%;
     margin-left: -1px;
     transform-origin: 50% 150px;
-}
+} */
 
-.analogClockDate{
+/* .analogClockDate{
     position: absolute;
     z-index: 3;
     width: 120px;
@@ -215,15 +200,15 @@ span{
     color: #fff;
     font-size: 11px;
     top: 80px;
-    left: 50%;
+    left: 50%; */
     /* top: 25%;
     left: 50%; */
-    margin-left: -60px;
+    /* margin-left: -60px;
     font-weight: 700;
     letter-spacing: 3px;
-}
+} */
 
-.analogClockDay{
+/* .analogClockDay{
     position: absolute;
     z-index: 3;
     width: 120px;
@@ -235,10 +220,10 @@ span{
     color: #fff;
     font-size: 11px;
     top: 200px;
-    left: 50%;
+    left: 50%; */
     /* top: 75%;
     left: 50%; */
-    margin-left: -60px;
+    /* margin-left: -60px;
     font-weight: 700;
     letter-spacing: 3px;
-}
+} */

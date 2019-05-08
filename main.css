@@ -17,11 +17,11 @@
 nav {
     position: fixed;
     top:0;
-    /* background-color: rgba(0, 0, 3); */
     background-color: #001064;
     width: 100%;
     padding: 10px 20px;
     border-bottom: 2px solid #5f5fc4;
+    line-height: 40px;
 }
 
 #brandNameContainer{
@@ -38,29 +38,22 @@ ul{
 }
 
 .menuItem{
-padding-right: 15px;
+margin-right: 20px; 
 font-size: 20px;
+padding-right:8px;
+border-right: 1px solid white;
 }
+.menuItem:hover, #brandNameContainer:hover{
+    border-bottom: 2px solid white;
+ }
 
-.menuItem::after{
-    content: "|";
-    padding: 5px;
-}
 
 a{
     text-decoration: none;
-    padding-right: 5px;
   }
 
-a::after{
-    padding: 5px;
-
-}  
 
 
-a:hover{
-    color : #5f5fc4;
-}
 
 main{
     position: relative;
@@ -224,6 +217,7 @@ span{
     /* top: 75%;
     left: 50%; */
     margin-left: -60px;
+    padding-left: 2px;
     font-weight: 800;
     letter-spacing: 3px;
     box-shadow: inset -2px 2px 5px rgba(0, 0, 0, 0.25);

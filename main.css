@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: sans-serif;
 } 
 
 
@@ -16,10 +17,11 @@
 nav {
     position: fixed;
     top:0;
-    background-color: rgba(0, 0, 3);
+    /* background-color: rgba(0, 0, 3); */
+    background-color: #001064;
     width: 100%;
     padding: 10px 20px;
-    border-bottom: 2px solid rgb(42, 42, 252);
+    border-bottom: 2px solid #5f5fc4;
 }
 
 #brandNameContainer{
@@ -57,7 +59,7 @@ a::after{
 
 
 a:hover{
-    color : rgb(42, 42, 252);
+    color : #5f5fc4;
 }
 
 main{
@@ -71,7 +73,7 @@ main{
     height: 350px;
     margin: 8% auto; 
     border-radius: 50%;
-    border: 10px solid black;
+    border: 14px solid #283593;
     position: relative;
     box-shadow: 0 2vw 4vw -1vw rgba(0, 0, 0, 0.8);
 }
@@ -80,7 +82,8 @@ main{
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background-color: #ccc;
+    /* background-color: #ccc; */
+    background-color: #283593;
     position: absolute;
     top:0;
     left:0;
@@ -88,11 +91,12 @@ main{
     bottom: 0;
     margin: auto; 
     z-index: 10;
-    box-shadow: 0 2px 4px -1px black;
+    box-shadow: 0 2px 4px -1px  #263238;;
 }
 
 .clockHand{
     position: absolute;
+    background: #001064;
     /* transform-origin:50% 95%; */
     /* transform: rotate(45deg) translate(-20px, 20px); */
     /* transform: translatex(-10px);  */
@@ -104,8 +108,7 @@ main{
     z-index: 8; 
     width: 4px;
     height: 95px;
-    background: yellow;
-    top: 90px;
+    top: 87px;
     text-align: center;
     left: 50%;
     /*half of the width*/
@@ -117,8 +120,7 @@ main{
     z-index: 7;
     width: 4px;
     height: 140px;
-    background: green;
-    top: 46px;
+    top: 43px;
     left: 50%;
     margin-left: -2px;
     transform-origin:50% 120px;
@@ -128,8 +130,7 @@ main{
     z-index: 7;
     width: 2px;
     height: 180px;
-    background: red;
-    top: 6px;
+    top: 2px;
     left: 50%;
     margin-left: -1px; 
     transform-origin:50% 160px;
@@ -147,7 +148,7 @@ span{
 .hour12{
     top:30px;
     left: 50%;
-    margin-left: -9px;
+    margin-left: -11px;
 }
 
 .hour6{
@@ -157,73 +158,71 @@ span{
 }
 
 .hour3{
-    top: 140px;
+    top: 155px;
     right: 30px;
 }
 
 .hour9{
     left: 32px;
-    top: 140px;
+    top: 155px;
 }
 
-/* .diallines{
+ .diallines{
     position: absolute;
     z-index: 2;
     width: 2px;
     height: 15px;
-    background: #666;
+    background: #263238;
+    /* background: #666; */
     left: 50%;
-    margin-left: -1px;
-    transform-origin: 50% 150px;
-} */
+    top:1px; 
+    /* bottom: 0; */
+    margin-left: -2px;
+    transform-origin: 50% 160px;
+} 
 
-/* .diallines:nth-of-type(5n){
-    position: absolute;
-    z-index: 2;
+.diallines:nth-of-type(5n){
     width: 4px;
     height: 25px;
-    background: #666;
-    left: 50%;
-    margin-left: -1px;
-    transform-origin: 50% 150px;
-} */
+}
 
-/* .analogClockDate{
-    position: absolute;
-    z-index: 3;
-    width: 120px;
-    height: 20px;
-    border-radius: 7px;
-    background: #888;
-    text-align: center;
-    line-height: 20px;
-    color: #fff;
-    font-size: 11px;
-    top: 80px;
-    left: 50%; */
-    /* top: 25%;
-    left: 50%; */
-    /* margin-left: -60px;
-    font-weight: 700;
-    letter-spacing: 3px;
-} */
 
-/* .analogClockDay{
+ .analogClockDate{
     position: absolute;
     z-index: 3;
     width: 120px;
     height: 25px;
     border-radius: 7px;
-    background: #888;
+    /* background: #888; */
+    background: #5f5fc4;
     text-align: center;
-    line-height: 20px;
+    line-height: 25px;
+    color: #fff; 
+    font-size: 12px;
+    top: 80px;
+    left: 50%; 
+     margin-left: -60px;
+    font-weight: 800;
+    letter-spacing: 3px;
+} 
+
+.analogClockDay{
+    position: absolute;
+    z-index: 3;
+    width: 120px;
+    height: 25px;
+    border-radius: 7px;
+    background: #5f5fc4;
+    /* background: #888; */
+    text-align: center;
+    line-height: 25px;
     color: #fff;
-    font-size: 11px;
+    font-size: 14px;
     top: 200px;
-    left: 50%; */
+    left: 50%; 
     /* top: 75%;
     left: 50%; */
-    /* margin-left: -60px;
-    font-weight: 700;
+    margin-left: -60px;
+    font-weight: 800;
     letter-spacing: 3px;
-} */
+} 

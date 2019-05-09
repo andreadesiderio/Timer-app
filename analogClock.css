@@ -1,0 +1,85 @@
+ .minuteHand{
+    z-index: 7;
+    width: 4px;
+    height: 140px;
+    top: 43px;
+    left: 50%;
+    margin-left: -2px;
+    transform-origin:50% 120px;
+}  
+
+ .secondHand{
+    z-index: 7;
+    width: 2px;
+    height: 180px;
+    top: 2px;
+    left: 50%;
+    margin-left: -1px; 
+    transform-origin:50% 160px;
+}
+
+
+span.hour{
+    display: inline-block;
+    position: absolute;
+    font-size: 22px;
+    font-weight: 700;
+    z-index: 4;
+}
+
+.hour12{
+    top:30px;
+    left: 50%;
+    margin-left: -11px;
+}
+
+.hour6{
+    bottom:30px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.hour3{
+    top: 150px;
+    right: 30px;
+}
+
+.hour9{
+    left: 32px;
+    top: 150px;
+}
+
+ 
+.diallines:nth-of-type(5n){
+    width: 4px;
+    height: 25px;
+}
+
+.analogText{
+    position: absolute;
+    z-index: 3;
+    width: 120px;
+    height: 25px;
+    border-radius: 7px;
+    background: #5f5fc4;
+    text-align: center;
+    line-height: 25px;
+    color: #fff; 
+    left: 50%; 
+    margin-left: -60px;
+    padding-left: 2px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    box-shadow: inset -2px 2px 5px rgba(0, 0, 0, 0.25);
+
+}
+ 
+.clockDate{
+    font-size: 12px;
+    top: 80px;
+} 
+
+.clockDay{
+    font-size: 14px;
+    top: 200px;
+} 

@@ -2,16 +2,28 @@
 
 window.addEventListener('load', preSetTimer);
 
-const button = document.getElementById("submit");
+function showDiallines (){
+    let diallines = document.getElementsByClassName("diallines");
+    let analogClock = document.getElementsByClassName("analogClock")[0];
+    
+    for (let i = 0; i < 60; i++){
+        analogClock.innerHTML += "<div class='diallines'></div>";
+        diallines[i].style.transform = "rotate(" + 6 * i + "deg)";
+    }
+}
+
+
+
+let button = document.getElementById("submit");
 button.addEventListener('click', setTimer);
 
 let timer; 
 
-// document.getElementById("body").addEventListener("load", preSetTimer());
 
 function preSetTimer(){
+    showDiallines ();
     let now = new Date();
-    let thisDay = now.getUTCDate();
+    let thisDay = now.getDate();
     const dayOption = document.getElementsByClassName("dayOption");
     for (let i = 0; i < dayOption.length; i ++){
      if (dayOption[i].value == thisDay){
@@ -40,12 +52,12 @@ function preSetTimer(){
 function setTimer(){
     clearInterval(timer);
 
-    let timerMonth = Number(document.getElementById("month").value);
-    let timerDay = Number(document.getElementById("day").value);
-    let timerYear = Number(document.getElementById("year").value);
-    let timerHour = Number(document.getElementById("hour").value);
-    let timerMinute = Number(document.getElementById("minute").value);
-    let timerSecond = Number(document.getElementById("second").value);
+    let timerMonth = Number(document.getElementById("monthSelector").value);
+    let timerDay = Number(document.getElementById("daySelector").value);
+    let timerYear = Number(document.getElementById("yearSelector").value);
+    let timerHour = Number(document.getElementById("hourInput").value);
+    let timerMinute = Number(document.getElementById("minuteInput").value);
+    let timerSecond = Number(document.getElementById("secondInput").value);
 
     
 
@@ -82,6 +94,7 @@ function setTimer(){
     //one day equat to 24 hours //
     const day = hour * 24; 
 
+
     function showTimer(){
         const now = new Date();
         //difference betwwen the chosen time and the time the timer starts///
@@ -101,8 +114,17 @@ function setTimer(){
         document.getElementById("timerValue").innerHTML += minutes + "Min";
         document.getElementById("timerValue").innerHTML += seconds + "Sec";
 
+        let background = document.getElementById("background");
+        for (let i = 0; i < remain; i++){
+            background.style = `width: ${i}; height: ${i};`;
+        }
+
+
+
+// background.style = `transition : background  ${remain} linear`;
         if (remain < 0){
             clearInterval(timer);
+            // background.style = "background: blue";
             document.getElementById("timerValue").innerHTML = "Time's Up!";
             return;
         }

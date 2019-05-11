@@ -9,41 +9,50 @@
             
             <link href="reset.css" rel="stylesheet" type="text/css">
             <link href="main.css" rel="stylesheet" type="text/css">
+            <style>
+            #background{
+                width: 0; 
+                height: 0;
+                background: pink;
+                border-radius: 50%;
+            }
+            
+            </style>
 
 
     </head>
 <body>
-<header role="heading">
-    <nav role="navigation">
-        <div class="inlineBlock" id="brandNameContainer">
-         <h1><a href="index.html" class="whiteText">Time App</a> </h1>
-         </div>
-        <div  class="inlineBlock menuContainer">
-         <ul class="inlineBlock menu"> 
-            <li class="inlineBlock menuItem">
-                <a href="#" class="whiteText">World Clock</a>
-            </li>
-            <li class="inlineBlock">
-                <a href="countDownTimer.html" class="menuItem whiteText">Timer</a>
-            </li>
-            <li class="inlineBlock">
-                <a href="#" class="menuItem whiteText">Stopwatch</a>
-            </li>
-            <li class="inlineBlock">
-                <a href="#" class="menuItem whiteText">Alarm</a>
-            </li>    
-         </ul>
-        </div>
-    </nav>
-</header>
+    <header role="heading">
+        <nav role="navigation">
+            <div class="inlineBlock" id="brandNameContainer">
+             <h1><a href="index.html" class="whiteText"><strong>Time App</strong></a></h1>
+             </div>
+            <div  class="inlineBlock menuContainer">
+             <ul class="inlineBlock menu"> 
+                <li class="inlineBlock menuItem">
+                    <a href="#" class="whiteText">World Clock</a>
+                </li>
+                <li class="inlineBlock menuItem">
+                    <a href="countDownTimer.html" class="whiteText">Timer</a>
+                </li>
+                <li class="inlineBlock menuItem">
+                    <a href="#" class="whiteText">Stopwatch</a>
+                </li>
+                <li class="inlineBlock menuItem">
+                    <a href="#" class="whiteText">Alarm</a>
+                </li>    
+             </ul>
+            </div>
+        </nav>
+    </header>
 <main role="main">
 
 <div id="countDownTimerContainer">    
     <h2>Timer</h2>
     <div id="selectionContainer">
-    <label for="day">Day:</label>
-    <select id="day">
-    <option class="dayOption" value="1">1</option>
+    <label for="daySelector">Day:</label>
+    <select id="daySelector">
+    <option class="dayOption">1</option>
     <option class="dayOption" value="2">2</option>
     <option class="dayOption" value="3">3</option>
     <option class="dayOption" value="4">4</option>
@@ -76,8 +85,8 @@
     <option class="dayOption" value="31">31</option>
     </select>
     
-    <label for="month">Month:</label>
-    <select id="month">
+    <label for="monthSelector">Month:</label>
+    <select id="monthSelector">
         <option class="monthOption" value='0'>Janurary</option>
         <option class="monthOption" value="1">February</option>
         <option class="monthOption" value="2">March</option>
@@ -92,8 +101,8 @@
         <option class="monthOption" value="11">December</option>
     </select>
     
-    <label for="year">Year:</label>
-    <select id="year">
+    <label for="yearSelector">Year:</label>
+    <select id="yearSelector">
     <option class="yearOption" value="2019">2019</option>
     <option class="yearOption" value="2020">2020</option>
     <option class="yearOption" value="2021">2021</option>
@@ -101,19 +110,32 @@
     <option class="yearOption" value="2023">2023</option>
     </select>
     
-    <label for="hour">Hour:</label>
-    <input type="text" id="hour" placeholder="hour">
-    <label for="minute">Minute:</label>
-    <input type="text" id="minute" placeholder="minute">
-    <label for="second">Second:</label> 
-    <input type="text" id="second" placeholder="second"> 
+    <label for="hourInput">Hour:</label>
+    <input type="text" id="hourInput" placeholder="hour">
+    <label for="minuteInput">Minute:</label>
+    <input type="text" id="minuteInput" placeholder="minute">
+    <label for="secondInput">Second:</label> 
+    <input type="text" id="secondInput" placeholder="second"> 
     <input type="button" id="submit" value="submit">
     </div>
     <p id="timerValue"></p>
     </div>
 
-</main>
-</body>
-<script type="text/javascript" src="countDownTimer.js" ></script>
+    <div class="analogClock" id="analogClock">
+        <div id="background">
+        <div class="dot"></div>
+        <div class="diallines"></div>
+        </div>
+    </div>
 
+</main>
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="jquery-ui.min.js"></script>
+        <script>
+      
+        // $("#datepicker").datepicker();
+        </script> 
+<script type="text/javascript" src="countDownTimer.js" ></script>
+</body>
 </html>

@@ -1,6 +1,15 @@
+.hourHand{
+    z-index: 5;
+    width: 4px;
+    height: 100px;
+    top: 79px;
+    left: 50%;
+    margin-left: -2px;
+    transform-origin: 50% 80px;
+}
 
 .minuteHand{
-    z-index: 7;
+    z-index: 6;
     width: 4px;
     height: 140px;
     top: 43px;

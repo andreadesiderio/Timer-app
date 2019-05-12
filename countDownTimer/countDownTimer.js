@@ -139,7 +139,7 @@ function setTimer(){
             // background.style.width = "100%";
             clearInterval(timer);
             // background.style = "background: blue";
-            // document.getElementById("timerValue").innerHTML = "Time's Up!";
+            document.getElementById("timerValue").innerHTML = "Time's Up!";
             return;
         }
      }

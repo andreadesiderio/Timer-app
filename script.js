@@ -32,7 +32,7 @@ function showDayAndDate(){
    
    let day = weekdays[date.getDay()];
 
-    clockDate.innerHTML = currentDate + " / " + month +  " / "  + year ;
+    clockDate.innerHTML = month + " / " + currentDate +  " / "  + year ;
     clockDay.innerHTML = day; 
 }
 

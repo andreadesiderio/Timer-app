@@ -94,11 +94,15 @@ function setTimer(){
     //one day equat to 24 hours //
     const day = hour * 24; 
 
+    
 
+    //   let width = 14;
+    //   let height = 14;
+    
     function showTimer(){
         const now = new Date();
-        //difference betwwen the chosen time and the time the timer starts///
-        const remain = end - now;
+    //difference betwwen the chosen time and the time the timer starts///
+    let remain = end - now;
        
         ///the remaining days are the remaining time devided by day (wich is hours * 24)
         const days = Math.floor(remain / day);
@@ -115,17 +119,27 @@ function setTimer(){
         document.getElementById("timerValue").innerHTML += seconds + "Sec";
 
         let background = document.getElementById("background");
-        for (let i = 0; i < remain; i++){
-            background.style = `width: ${i}; height: ${i};`;
-        }
+        //  background.style.transition = `width ${remain}s`;
+         document.getElementById("timerValue").innerHTML = remain;
+        background.style.width =  `${100000 / remain}%`;
+        background.style.height =  `${100000 / remain}%`;
+        // background.style.height = ${height++}pxx
+    
+        // height ++;
+        // width ++;
+        // for (let i = 0; i < remain, i++){
 
+        // }
+        
+        // background.style = `background: pink; width: ${width} %`;
 
 
 // background.style = `transition : background  ${remain} linear`;
         if (remain < 0){
+            // background.style.width = "100%";
             clearInterval(timer);
             // background.style = "background: blue";
-            document.getElementById("timerValue").innerHTML = "Time's Up!";
+            // document.getElementById("timerValue").innerHTML = "Time's Up!";
             return;
         }
      }

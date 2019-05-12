@@ -7,14 +7,23 @@
             <meta name="decsriptiom" content="timer app">
             <title>Timer App | Count Down Timer</title>
             
-            <link href="reset.css" rel="stylesheet" type="text/css">
-            <link href="main.css" rel="stylesheet" type="text/css">
+            <link href="../reset.css" rel="stylesheet" type="text/css">
+            <link href="../main.css" rel="stylesheet" type="text/css">
             <style>
             #background{
-                width: 0; 
-                height: 0;
-                background: pink;
+                width: 57px;
+                height: 57px;    
+                max-width: 322px;
+                max-height: 322px;
+                background: pink; 
                 border-radius: 50%;
+                position: absolute;
+                margin:auto;
+                top:0;
+                 left:0;
+                right: 0;
+                bottom:0; 
+        
             }
             
             </style>
@@ -25,7 +34,7 @@
     <header role="heading">
         <nav role="navigation">
             <div class="inlineBlock" id="brandNameContainer">
-             <h1><a href="index.html" class="whiteText"><strong>Time App</strong></a></h1>
+             <h1><a href="../index.html" class="whiteText"><strong>Time App</strong></a></h1>
              </div>
             <div  class="inlineBlock menuContainer">
              <ul class="inlineBlock menu"> 
@@ -46,7 +55,7 @@
         </nav>
     </header>
 <main role="main">
-
+    <input type="datetime-local" name="bday"/>
 <div id="countDownTimerContainer">    
     <h2>Timer</h2>
     <div id="selectionContainer">
@@ -121,21 +130,16 @@
     <p id="timerValue"></p>
     </div>
 
+    
     <div class="analogClock" id="analogClock">
-        <div id="background">
+        <div id="background"></div>
         <div class="dot"></div>
-        <div class="diallines"></div>
-        </div>
+        <div class="diallines"></div> 
     </div>
+    
 
 </main>
 
-<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="jquery-ui.min.js"></script>
-        <script>
-      
-        // $("#datepicker").datepicker();
-        </script> 
 <script type="text/javascript" src="countDownTimer.js" ></script>
 </body>
 </html>

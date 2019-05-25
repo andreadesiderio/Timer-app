@@ -9,28 +9,8 @@
             
             <link href="../reset.css" rel="stylesheet" type="text/css">
             <link href="../main.css" rel="stylesheet" type="text/css">
-            <style>
-            #background{
-                width: 14px;
-                height: 14px;    
-                max-width: 322px;
-                max-height: 322px;
-                background:radial-gradient(white, rgba(40, 53, 147, 0.2), rgba(95, 95, 196, 0.5));
-                border-radius: 50%;
-                position: absolute;
-                margin:auto;
-                top:0;
-                 left:0;
-                right: 0;
-                bottom:0; 
-        
-            }
-            /* #283593
-            #5f5fc4 */
+            <link href="countDownTimer.css" rel="stylesheet" type="text/css">
             
-            </style>
-
-
     </head>
 <body>
     <header role="heading">
@@ -44,7 +24,7 @@
                     <a href="#" class="whiteText">World Clock</a>
                 </li>
                 <li class="inlineBlock menuItem">
-                    <a href="countDownTimer.html" class="whiteText">Timer</a>
+                    <a href="countDownTimer.html" class="whiteText">Count Down Timer</a>
                 </li>
                 <li class="inlineBlock menuItem">
                     <a href="#" class="whiteText">Stopwatch</a>
@@ -57,10 +37,14 @@
         </nav>
     </header>
 <main role="main">
-    <input type="datetime-local" name="bday"/>
-<div id="countDownTimerContainer">    
-    <h2>Timer</h2>
-    <div id="selectionContainer">
+        <h2>Count Down Timer</h2>
+    <form>
+    <input type="datetime-local" name="calendar" id="calendar" />
+    <input type="button" id="submit" value="submit">
+    </form>
+<div id="countDownTimerContainer">    </div>
+    
+    <!-- <div id="selectionContainer">
     <label for="daySelector">Day:</label>
     <select id="daySelector">
     <option class="dayOption">1</option>
@@ -129,19 +113,20 @@
     <input type="text" id="secondInput" placeholder="second"> 
     <input type="button" id="submit" value="submit">
     </div>
-    <p id="timerValue"></p>
-    </div>
-
+    
+    </div> -->
+    <p id="timerValue">Timer Value here</p>
     
     <div class="analogClock" id="analogClock">
         <div id="background"></div>
         <div class="dot"></div>
+        <div class="clockHand secondHand"></div>
         <div class="diallines"></div> 
     </div>
     
 
 </main>
-
+<script type="text/javascrtipy" src="script.js"></script>
 <script type="text/javascript" src="countDownTimer.js" ></script>
 </body>
 </html>

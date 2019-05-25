@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="jquery-ui.min.css">
+        <style>
+         p{margin-top: 50px;
+        margin-bottom: 50px;}
+        div{margin-top: 50px;
+        margin-bottom: 50px;}
+
+
+            
+            </style>
+      
     </head>
     <body>
-
-        <input type="text" id="datepicker"/>
-
-        <div class="analogClock">
-                <div class="dot"></div>
-                <div class="diallines"></div>
-            </div>
+<div id="welcomeMessage">Welcome to My World</div>
+    <p>Im a paragraph</p>
         
     
-
-        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="jquery-ui.min.js"></script>
-        <script>
-        $("#datepicker").datepicker();
-        
-        </script>
-        <script type="text/javascript" scr="script.js"></script>
-        <script type="text/javascript" src="countDownTimer.js"></script>
+<script>
+    var shadowHost = document.querySelector("#welcomeMessage");
+var shadowRoot = shadowHost.webkitCreateShadowRoot();
+shadowRoot.textContent = "Hello Shadow DOM World";
+</script>
+   
     </body>
 </html>

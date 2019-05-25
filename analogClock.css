@@ -18,16 +18,7 @@
     transform-origin:50% 120px;
 }  
 
- .secondHand{
-    z-index: 7;
-    width: 2px;
-    height: 180px;
-    top: 2px;
-    left: 50%;
-    margin-left: -1px; 
-    transform-origin:50% 160px;
-}
-
+ 
 
 span.hour{
     display: inline-block;

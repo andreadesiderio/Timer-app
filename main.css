@@ -90,6 +90,18 @@ main{
     border-top-right-radius: 50%;
 }
 
+.secondHand{
+    z-index: 7;
+    width: 2px;
+    height: 180px;
+    top: 2px;
+    left: 50%;
+    margin-left: -1px; 
+    transform-origin:50% 160px;
+}
+
+
+
 .diallines{
     position: absolute;
     z-index: 2;

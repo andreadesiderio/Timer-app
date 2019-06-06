@@ -1,3 +1,69 @@
+  /* #283593  #5f5fc4 */
+
+*{
+    text-align: center;
+}
+
+.titleContainer{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+ .title{
+    font-size: 35px;
+      color: #283593;
+      font-weight: bold;
+      /* text-align: center; */
+      border-bottom: #283593 2px solid;
+      width: 30%;
+      margin: 10px auto 20px auto;
+  } 
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
+.timerSetterContainer{
+    border-radius: 7px;
+    border: 2px solid #001064;;
+    background-color: #5f5fc4;
+}
+
+form{
+    padding-top: 20px;
+}
+
+.dateLabel{
+    margin-right: 85px;
+}
+
+input#calendar{
+    width: 250px;
+    /* background: none; */
+    }
+
+input{
+    border: none;
+    height: 40px;
+    font-size: 30px;
+    color: #fff; 
+    font-weight: 700;
+    width: 100px;
+    background: rgba(95, 95, 196, 0.8);
+    border-radius: 7px;
+}
+/* #5f5fc4; */
+
+.timeSetter{
+    margin-top: 20px;
+}
+ 
+
+.timerValueContainer{
+    visibility: hidden;
+}
+
 #background{
                     -webkit-transition: width 0.1s;
                     -webkit-transition: height 0.1s;
@@ -10,10 +76,9 @@
                     position: absolute;
                     margin:auto;
                     top:0;
-                     left:0;
+                    left:0;
                     right: 0;
                     bottom:0; 
                 }
-    /* #283593
-            #5f5fc4 */
+  
             

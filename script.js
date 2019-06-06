@@ -47,11 +47,9 @@ function runClock(){
     let hour = date.getHours();
     let minute = date.getMinutes();
     let second = date.getSeconds();
-    
-    //this is to get 360deg rotation... hour(12hours)*30=360
-    let hDeg = (hour * 30) + (minute / 2);
-    // minute goes to 60 and 60*6 gets a 360 rotaion
-    let mDeg = minute * 6;
+  
+    let hDeg = (hour * 30) + (minute / 2); //this is to get 360deg rotation... hour(12hours)*30=360
+    let mDeg = minute * 6;// minute goes to 60 and 60*6 gets a 360 rotaion
     let sDeg = second * 6;
 
     let hourHand = document.querySelector(".hourHand");

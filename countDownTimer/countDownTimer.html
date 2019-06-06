@@ -34,96 +34,54 @@
                 </li>    
              </ul>
             </div>
-        </nav>
+        </nav>    
     </header>
+
 <main role="main">
-        <h2>Count Down Timer</h2>
+        <div class="titleContainer">
+                <h1 class="title">Count Down Timer</h1>
+        </div>
+          
+    <div class="timerSetterContainer">
+    <h2>Timer Setter:</h2>    
     <form>
-    <input type="datetime-local" name="calendar" id="calendar" />
-    <input type="button" id="submit" value="submit">
+    <div class="inlineBlock">
+    <label for="calendar" class="dateLabel">Date:</label><br> 
+    <input type="date" name="calendar" id="calendar" />
+    </div>
+    <div class="inlineBlock timePickerContainer">
+    <div class="inlineBlock">
+    <label for="hourInput">Hours:</label><br>
+    <input type="text" id="hourInput" placeholder="00">
+    </div>
+    <div class="inlineBlock">
+    <label for="minuteInput">Minutes:</label><br>
+    <input type="text" id="minuteInput" placeholder="00">
+    </div>
+    <div class="inlineBlock">
+    <label for="secondInput">Seconds:</label><br> 
+    <input type="text" id="secondInput" placeholder="00"><br>
+    </div>
+    </div>
+    <div>
+    <button id="submit" class="timeSetter">Set Timer</button>
+    </div>
     </form>
-<div id="countDownTimerContainer">    </div>
-    
-    <!-- <div id="selectionContainer">
-    <label for="daySelector">Day:</label>
-    <select id="daySelector">
-    <option class="dayOption">1</option>
-    <option class="dayOption" value="2">2</option>
-    <option class="dayOption" value="3">3</option>
-    <option class="dayOption" value="4">4</option>
-    <option class="dayOption" value="5">5</option>
-    <option class="dayOption" value="6">6</option>
-    <option class="dayOption" value="7">7</option>
-    <option class="dayOption" value="8">8</option>
-    <option class="dayOption" value="9">9</option>
-    <option class="dayOption" value="10">10</option>
-    <option class="dayOption" value="11">11</option>
-    <option class="dayOption" value="12">12</option>
-    <option class="dayOption" value="13">13</option>
-    <option class="dayOption" value="14">14</option>
-    <option class="dayOption" value="15">15</option>
-    <option class="dayOption" value="16">16</option>
-    <option class="dayOption" value="17">17</option>
-    <option class="dayOption" value="18">18</option>
-    <option class="dayOption" value="19">19</option>
-    <option class="dayOption" value="20">20</option>
-    <option class="dayOption" value="21">21</option>
-    <option class="dayOption" value="22">22</option>
-    <option class="dayOption" value="23">23</option>
-    <option class="dayOption" value="24">24</option>
-    <option class="dayOption" value="25">25</option>
-    <option class="dayOption" value="26">26</option>
-    <option class="dayOption" value="27">27</option>
-    <option class="dayOption" value="28">28</option>
-    <option class="dayOption" value="29">29</option>
-    <option class="dayOption" value="30">30</option>
-    <option class="dayOption" value="31">31</option>
-    </select>
-    
-    <label for="monthSelector">Month:</label>
-    <select id="monthSelector">
-        <option class="monthOption" value='0'>Janurary</option>
-        <option class="monthOption" value="1">February</option>
-        <option class="monthOption" value="2">March</option>
-        <option class="monthOption" value="3">April</option>
-        <option class="monthOption" value="4">May</option>
-        <option class="monthOption" value="5">June</option>
-        <option class="monthOption" value="6">July</option>
-        <option class="monthOption" value="7">August</option>
-        <option class="monthOption" value="8">October</option>
-        <option class="monthOption" value="9">September</option>
-        <option class="monthOption" value="10">November</option>
-        <option class="monthOption" value="11">December</option>
-    </select>
-    
-    <label for="yearSelector">Year:</label>
-    <select id="yearSelector">
-    <option class="yearOption" value="2019">2019</option>
-    <option class="yearOption" value="2020">2020</option>
-    <option class="yearOption" value="2021">2021</option>
-    <option class="yearOption" value="2022">2022</option>
-    <option class="yearOption" value="2023">2023</option>
-    </select>
-    
-    <label for="hourInput">Hour:</label>
-    <input type="text" id="hourInput" placeholder="hour">
-    <label for="minuteInput">Minute:</label>
-    <input type="text" id="minuteInput" placeholder="minute">
-    <label for="secondInput">Second:</label> 
-    <input type="text" id="secondInput" placeholder="second"> 
-    <input type="button" id="submit" value="submit">
     </div>
     
-    </div> -->
-    <p id="timerValue">Timer Value here</p>
     
+    <div id="countDownTimerContainer">    </div>    
     <div class="analogClock" id="analogClock">
         <div id="background"></div>
         <div class="dot"></div>
         <div class="clockHand secondHand"></div>
         <div class="diallines"></div> 
     </div>
-    
+
+    <div class="timerValueContainer" id= "timerValueContainer">
+    <p id="timerValue"> 0Days 0Hrs 0Min 0Sec</p>
+    <button id="startButton">Start</button>
+    </div>
 
 </main>
 <script type="text/javascrtipy" src="script.js"></script>

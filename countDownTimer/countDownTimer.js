@@ -71,8 +71,8 @@ function calculateTimer(){
       setTimer = function (){  
      document.getElementById("timerValue").innerHTML = days + "Days" + hours + "Hrs" + minutes + "Min" + seconds + "Sec";
       }
-      let activateButton = document.getElementById("submit");
-      activateButton.addEventListener('click', function(){showTimer();setTimer()});  
+      // let activateButton = document.getElementById("submit");
+      // activateButton.addEventListener('click', function(){setTimer();showTimer();});  
         let hDeg = (hours * 30) + (minutes / 2);
         let mDeg = minutes * 6;
         let sDeg = seconds * 6;
@@ -96,11 +96,12 @@ document.getElementById("startButton").addEventListener('click', calculateTimer 
 
 
 function showTimer(){
-  document.getElementById("timerValueContainer").style = "visibility: visible";
   setTimer();
+  document.getElementById("timerValueContainer").style = "visibility: visible";
+  
 }
-let activateButton = document.getElementById("submit");
-activateButton.addEventListener('click', setTimer);    
+ let activateButton = document.getElementById("submit");
+ activateButton.addEventListener('click', setTimer);    
        
              
     

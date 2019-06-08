@@ -60,9 +60,9 @@ input{
 }
  
 
-.timerValueContainer{
+/* .timerValueContainer{
     visibility: hidden;
-}
+} */
 
 #background{
                     -webkit-transition: width 0.1s;

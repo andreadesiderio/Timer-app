@@ -9,7 +9,7 @@ function showDiallines (){
     }
 }
 
-const calendar = document.getElementById("calendar");
+let calendar = document.getElementById("calendar");
 
 function setCalendar() {
     let now = new Date();
@@ -21,18 +21,24 @@ function setCalendar() {
     (day < 10 ? "0" + day.toString() : day);
     calendar.value = calendarDate;
 }
-
-window.addEventListener("load", preSetTimer);
 function preSetTimer(){
     showDiallines();
     setCalendar();
 }
+window.addEventListener("load", preSetTimer);
 
-
-
+// function showTimer(){
+//   let timerValue = document.getElementById("timerValueContainer").style = "visibility: visible";
+  
+// }
+//  let activateButton = document.getElementById("submit");
+//  activateButton.addEventListener('click', function(){document.getElementById("timerValueContainer").style = "visibility: visible"}); 
+let starButton = document.getElementById("submit");
+starButton.addEventListener('click', calculateTimer);  
+let timer; 
 function calculateTimer(){
-  let timer; 
-    clearInterval(timer);
+  alert('hi');
+    //clearInterval(timer);
     let timerDate = calendar.value.toString().split("-");
     let timerYear = timerDate[0];
     let timerMonth = timerDate[1] - 1;
@@ -41,9 +47,9 @@ function calculateTimer(){
     let timerMinute = Number(document.getElementById("minuteInput").value);
     let timerSecond = Number(document.getElementById("secondInput").value);
   
-     if(timerHour == ""){timerHour = 0;}
-     if(timerMinute == ""){timerMinute = 0;}
-     if(timerSecond == ""){timerSecond = 0;}
+     if(timerHour == ""){timerHour = 0};
+     if(timerMinute == ""){timerMinute = 0};
+     if(timerSecond == ""){timerSecond = 0};
     
     let currentHour = new Date().getHours();
     timerHour = Number(currentHour + timerHour);
@@ -53,26 +59,21 @@ function calculateTimer(){
 
     let currentSecond = new Date().getSeconds();
     timerSecond = Number(currentSecond + timerSecond); 
-    
+  function runTimer (){
+       alert('hey');
     let deadline = new Date(timerYear, timerMonth, timerDay, timerHour, timerMinute, timerSecond);
     let second = 1000; //one second equal to 1000 milliseconds///
     let minute = second * 60; ///one minute equal to 60 seconds///
     let hour = minute * 60; //one hour equal to 60 minutes 
     let day = hour * 24;   //one day equat to 24 hours //
 
-    let runTimer = function (){
-      let setTimer;
       let startTime = new Date();
       let remain = deadline - startTime;
       let days = Math.round(remain / day);
       let hours = Math.round((remain % day) / hour);
       let minutes = Math.round((remain % hour) / minute);
-      let seconds = Math.ceil((remain % minute) / second); 
-      setTimer = function (){  
+      let seconds = Math.ceil((remain % minute) / second);  
      document.getElementById("timerValue").innerHTML = days + "Days" + hours + "Hrs" + minutes + "Min" + seconds + "Sec";
-      }
-      // let activateButton = document.getElementById("submit");
-      // activateButton.addEventListener('click', function(){setTimer();showTimer();});  
         let hDeg = (hours * 30) + (minutes / 2);
         let mDeg = minutes * 6;
         let sDeg = seconds * 6;
@@ -83,25 +84,18 @@ function calculateTimer(){
         background.style.width =  `${100000 / remain}%`;
         background.style.height =  `${100000 / remain}%`;
         
-        if (remain < 0){
+        if (remain <= 0){
           clearInterval(timer);
           document.getElementById("timerValue").innerHTML = "Time's Up!";
           return;
-    }
-}
-    timer = setInterval(runTimer, 1000); 
-    }
-
-document.getElementById("startButton").addEventListener('click', calculateTimer );
+        }
+     }
+     timer = setInterval(runTimer, 1000); 
+     }
 
 
-function showTimer(){
-  setTimer();
-  document.getElementById("timerValueContainer").style = "visibility: visible";
-  
-}
- let activateButton = document.getElementById("submit");
- activateButton.addEventListener('click', setTimer);    
+
+ 
        
              
     

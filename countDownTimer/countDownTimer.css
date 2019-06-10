@@ -64,8 +64,9 @@ input{
     visibility: hidden;
 } */
 
-#background{
+#background{         transition: width 0.1s;
                     -webkit-transition: width 0.1s;
+                    transition: height 0.1s;
                     -webkit-transition: height 0.1s;
                     width: 14px;
                     height: 14px;    

@@ -25,16 +25,17 @@ function preSetTimer(){
     showDiallines();
     setCalendar();
 }
-window.addEventListener("load", preSetTimer);
+window.addEventListener('load', preSetTimer);
 
-const startButton = document.getElementById("submit");
-startButton.addEventListener('click', calculateTimer);  
+let startThisButton = document.getElementById('countDownTimeSetter');
+startThisButton.addEventListener('click', calculateTimer);  
+//document.getElementById('countDownTimeSetter').addEventListener('click', calculateTimer);
 
 let timer;
-
+//calculateTimer();
 function calculateTimer(){
   alert('calculateTimer');
-    clearInterval(timer);
+  //  clearInterval(timer);
     let timerDate = calendar.value.toString().split("-");
     let timerYear = timerDate[0];
     let timerMonth = timerDate[1] - 1;
@@ -62,7 +63,7 @@ function calculateTimer(){
     let hour = minute * 60; 
     let day = hour * 24;   
     alert (deadline);
-
+    console.log('calculAtegain');
     let runTimer = function(){
       alert('runtimer');
       // let startTime = new Date();
@@ -88,8 +89,9 @@ function calculateTimer(){
         //   document.getElementById("timerValue").innerHTML = "Time's Up!";
         //   return;
         // }
-     }
-     alert('calculAtegain');
-      timer = setInterval(runTimer, 1000); 
+     };
+    // console.log('calculAtegain');
+       timer = setInterval(runTimer, 1000); 
+
      }
     

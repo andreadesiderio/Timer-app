@@ -27,15 +27,18 @@ function preSetTimer(){
 }
 window.addEventListener('load', preSetTimer);
 
-let startThisButton = document.getElementById('countDownTimeSetter');
-startThisButton.addEventListener('click', calculateTimer);  
-//document.getElementById('countDownTimeSetter').addEventListener('click', calculateTimer);
+document.getElementById('countDownTimeSetter').addEventListener('click', calculateTimer);  
 
-let timer;
-//calculateTimer();
+
+let countDownTimerRunning = 0;
+document.getElementById('startButton').addEventListener('click', function(){
+  countDownTimerRunning = 1; calculateTimer(countDownTimerRunning); });
+
 function calculateTimer(){
-  alert('calculateTimer');
-  //  clearInterval(timer);
+  let timer;
+  if (countDownTimerRunning == 0){
+    clearInterval(timer);
+  }
     let timerDate = calendar.value.toString().split("-");
     let timerYear = timerDate[0];
     let timerMonth = timerDate[1] - 1;
@@ -62,36 +65,38 @@ function calculateTimer(){
     let minute = second * 60; 
     let hour = minute * 60; 
     let day = hour * 24;   
-    alert (deadline);
-    console.log('calculAtegain');
-    let runTimer = function(){
-      alert('runtimer');
-      // let startTime = new Date();
-      // let remain = deadline - startTime;
-      // let days = Math.round(remain / day);
-      // let hours = Math.round((remain % day) / hour);
-      // let minutes = Math.round((remain % hour) / minute);
-      // let seconds = Math.round((remain % minute) / second);  
-      //  document.getElementById("timerValue").innerHTML = days + "Days" + hours + "Hrs" + minutes + "Min" + seconds + "Sec";
+    function runTimer(){
+      let startTime = new Date();
+      let remain = deadline - startTime;
+      let days = Math.round(remain / day);
+      let hours = Math.round((remain % day) / hour);
+      let minutes = Math.round((remain % hour) / minute);
+      let seconds = Math.ceil((remain % minute) / second);  
+       document.getElementById("timerValue").innerHTML = days + "Days" + hours + "Hrs" + minutes + "Min" + seconds + "Sec";
+        let hDeg = (hours * 30) + (minutes / 2);
+        let mDeg = minutes * 6;
+        let sDeg = seconds * 6;
+        let secondHand = document.querySelector(".secondHand");
+        secondHand.style.transform = "rotate( " + sDeg + "deg)";
 
-        // let hDeg = (hours * 30) + (minutes / 2);
-        // let mDeg = minutes * 6;
-        // let sDeg = seconds * 6;
-        // let secondHand = document.querySelector(".secondHand");
-        // secondHand.style.transform = "rotate( " + sDeg + "deg)";
-
-        // let background = document.getElementById("background");
-        // background.style.width =  `${100000 / remain}%`;
-        // background.style.height =  `${100000 / remain}%`;
+        let background = document.getElementById("background");
+        background.style.width =  `${100000 / remain}%`;
+        background.style.height =  `${100000 / remain}%`;
         
-        // if (remain < 0){
-        //   clearInterval(timer);
-        //   document.getElementById("timerValue").innerHTML = "Time's Up!";
-        //   return;
-        // }
-     };
-    // console.log('calculAtegain');
-       timer = setInterval(runTimer, 1000); 
-
+        if (remain < 0){
+          countDownTimerRunning = 0;
+          clearInterval(timer);
+          document.getElementById("timerValue").innerHTML = "Time's Up!";
+          return;
+        }
      }
+     runTimer();
+     if (countDownTimerRunning == 1){
+      timer = setInterval(runTimer, 1000);
+    }
+}
+       //timer = setInterval(runTimer, 1000); 
+      //  document.getElementById('startButton').addEventListener('click', function(){alert("hi"); timer = setInterval(runTimer, 1000)} )
     
+    
+    // document.getElementById('startButton').addEventListener('click', )

@@ -8,6 +8,10 @@
     display: inline-block;
 }
 
+.greenButton{
+    background-color: #03dac6;
+}
+
 .whiteText{
     color: white;
 }
@@ -22,6 +26,7 @@ nav {
     padding: 10px 20px;
     border-bottom: 2px solid #5f5fc4;
     line-height: 40px;
+    z-index: 1;
 }
 
 #brandNameContainer{
@@ -56,6 +61,16 @@ main{
     position: relative;
     top: 100px;
 } 
+
+.title{
+    font-size: 35px;
+      color: #283593;
+      font-weight: bold;
+      /* text-align: center; */
+      border-bottom: #283593 2px solid;
+      width: 30%;
+      margin: 10px auto 20px auto;
+  } 
 
 .analogClock{
     background-color: azure;

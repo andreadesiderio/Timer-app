@@ -1,4 +1,4 @@
-  /* #283593  #5f5fc4 */
+  /* #283593  #5f5fc4 #03dac6*/
 
 *{
     text-align: center;
@@ -9,15 +9,7 @@
     margin-bottom: 20px;
 }
 
- .title{
-    font-size: 35px;
-      color: #283593;
-      font-weight: bold;
-      /* text-align: center; */
-      border-bottom: #283593 2px solid;
-      width: 30%;
-      margin: 10px auto 20px auto;
-  } 
+ 
 
 main{
     width: 90%;
@@ -26,11 +18,23 @@ main{
 
 .timerSetterContainer{
     border-radius: 7px;
-    border: 2px solid #001064;;
-    background-color: #5f5fc4;
+    /* border: 1px solid #001064;  */
+     /* background-color: azure;  */
+     /* background-color: #5f5fc4;  */
+     /* background-color: rgba(95, 95, 196, 0.5); */
+      background-color: rgba(40, 53, 147, 0.1); 
+     width: 50%;
+     margin: auto;
+     padding-bottom: 20px;
+     /* box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.25); */
+     /* box-shadow: -10px 18px 20px 10px rgba(0, 0, 0, 0.3); */
+     box-shadow: -8px 16px 18px 5px rgba(0, 0, 0, 0.3);
 }
-
-form{
+h2{
+    color: #283593;
+    font-size: 25px;
+}
+form, h2{
     padding-top: 20px;
 }
 
@@ -40,19 +44,22 @@ form{
 
 input#calendar{
     width: 250px;
+    /* color: lightgray; */
     /* background: none; */
     }
 
 input{
     border: none;
     height: 40px;
-    font-size: 30px;
-    color: #fff; 
+    font-size: 30px; 
     font-weight: 700;
     width: 100px;
-    background: rgba(95, 95, 196, 0.8);
-    border-radius: 7px;
+    /* background: rgba(95, 95, 196, 0.8);*/
+    border-radius: 7px; 
 }
+/* input::placeholder{
+    color: lightgray;
+} */
 /* #5f5fc4; */
 
 .timeSetter{
@@ -72,7 +79,7 @@ input{
                     height: 14px;    
                     max-width: 322px;
                     max-height: 322px;
-                    background:radial-gradient(white, rgba(40, 53, 147, 0.2), rgba(95, 95, 196, 0.5));
+                    background:radial-gradient(white, white, rgba(40, 53, 147, 0.2), rgba(95, 95, 196, 0.5));
                     border-radius: 50%;
                     position: absolute;
                     margin:auto;

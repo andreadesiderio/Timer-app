@@ -3,13 +3,16 @@
     font-family: sans-serif;
 } 
 
-
 .inlineBlock{
     display: inline-block;
 }
 
 .greenButton{
     background-color: #03dac6;
+}
+
+.medBackground{
+    background-color: #283593;
 }
 
 .whiteText{
@@ -71,7 +74,9 @@ main{
       width: 30%;
       margin: 10px auto 20px auto;
   } 
-
+.clockContainer{
+    position: relative;
+}
 .analogClock{
     background-color: azure;
     /* width: 350px;

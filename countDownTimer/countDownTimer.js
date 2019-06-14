@@ -1,17 +1,18 @@
 "use strict"
-function showDiallines (){
-    let diallines = document.getElementsByClassName("diallines");
-    let analogClock = document.getElementsByClassName("analogClock")[0];
+// function showDiallines (){
+//     let diallines = document.getElementsByClassName("diallines");
+//     let analogClock = document.getElementsByClassName("analogClock")[0];
     
-    for (let i = 0; i < 60; i++){
-        analogClock.innerHTML += "<div class='diallines'></div>";
-        diallines[i].style.transform = "rotate(" + 6 * i + "deg)";
-    }
-}
+//     for (let i = 0; i < 60; i++){
+//         analogClock.innerHTML += "<div class='diallines'></div>";
+//         diallines[i].style.transform = "rotate(" + 6 * i + "deg)";
+//     }
+// }
 
 const calendar = document.getElementById("calendar");
 
-function setCalendar() {
+// function setCalendar() {
+  function showDayAndDat(){
     let now = new Date();
     let year = now.getFullYear();
     let month = now.getMonth() + 1;
@@ -21,11 +22,11 @@ function setCalendar() {
     (day < 10 ? "0" + day.toString() : day);
     calendar.value = calendarDate;
 }
-function preSetTimer(){
-    showDiallines();
-    setCalendar();
-}
-window.addEventListener('load', preSetTimer);
+// function preSetTimer(){
+//     // showDiallines();
+//     setCalendar();
+// }
+// window.addEventListener('load', preSetTimer);
 
 document.getElementById('countDownTimeSetter').addEventListener('click', calculateTimer);  
 

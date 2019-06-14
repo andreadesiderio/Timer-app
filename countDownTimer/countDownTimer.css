@@ -1,4 +1,4 @@
-  /* #283593  #5f5fc4 #03dac6*/
+  /* #283593  #5f5fc4 #001064 #03dac6*/
 
 *{
     text-align: center;
@@ -8,8 +8,6 @@
     width: 100%;
     margin-bottom: 20px;
 }
-
- 
 
 main{
     width: 90%;
@@ -43,17 +41,18 @@ form, h2{
 }
 
 input#calendar{
-    width: 250px;
+    width: 200px;
+    height: 25px;
     /* color: lightgray; */
     /* background: none; */
     }
 
 input{
     border: none;
-    height: 40px;
-    font-size: 30px; 
+    /* height: 30px; */
+    font-size: 20px; 
     font-weight: 700;
-    width: 100px;
+     width: 90px; 
     /* background: rgba(95, 95, 196, 0.8);*/
     border-radius: 7px; 
 }
@@ -70,8 +69,33 @@ input{
 /* .timerValueContainer{
     visibility: hidden;
 } */
+.buttonContainer{
+    width: 60px;
+    position: absolute;
+}
+#startPauseButton{
+    left: 39.5%;
+    /* top: 30%; */
+    transform: rotate(-45deg);
+}
+ #stopResumeButton{
+    left: 57%;
+    /* top: 30%; */
+    transform: rotate(45deg);
+ }
 
+.buttonHead{
+    width: 60px; 
+    height: 40px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
 
+.buttonStem{
+    width: 30px; 
+    height: 20px;
+    margin: auto;
+}
 
 #background{         transition: width 0.1s;
                     -webkit-transition: width 0.1s;

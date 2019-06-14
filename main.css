@@ -63,7 +63,7 @@ main{
 } 
 
 .title{
-    font-size: 35px;
+    font-size: 25px;
       color: #283593;
       font-weight: bold;
       /* text-align: center; */
@@ -74,11 +74,13 @@ main{
 
 .analogClock{
     background-color: azure;
-    width: 350px;
-    height: 350px;
+    /* width: 350px;
+    height: 350px; */
+    width: 450px;
+    height: 450px;
     margin: 8% auto; 
     border-radius: 50%;
-    border: 14px solid #283593;
+    border: 15px solid #283593;
     position: relative;
     box-shadow: -10px 18px 20px 10px rgba(0, 0, 0, 0.3);
 }
@@ -108,14 +110,32 @@ main{
 .secondHand{
     z-index: 7;
     width: 2px;
-    height: 180px;
-    top: 2px;
+    height: 230px;
+    top: 4px;
     left: 50%;
     margin-left: -1px; 
-    transform-origin:50% 160px;
+    transform-origin:50% 210px;
 }
 
+.minuteHand{
+    z-index: 6;
+    width: 4px;
+    height: 190px;
+    top: 44px;
+    left: 50%;
+    margin-left: -2px;
+    transform-origin:50% 170px;
+}  
 
+.hourHand{
+    z-index: 5; 
+    width: 4px;
+    height: 150px;
+    top: 84px;
+    left: 50%;
+    margin-left: -2px;
+    transform-origin: 50% 130px;
+}
 
 .diallines{
     position: absolute;
@@ -126,5 +146,6 @@ main{
     left: 50%;
     top:1px; 
     margin-left: -2px;
-    transform-origin: 50% 160px;
+    /* transform-origin: 50% 160px; */
+    transform-origin: 50% 210px;
 } 

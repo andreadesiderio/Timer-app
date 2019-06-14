@@ -1,24 +1,4 @@
-.hourHand{
-    z-index: 5;
-    width: 4px;
-    height: 100px;
-    top: 79px;
-    left: 50%;
-    margin-left: -2px;
-    transform-origin: 50% 80px;
-}
 
-.minuteHand{
-    z-index: 6;
-    width: 4px;
-    height: 140px;
-    top: 43px;
-    left: 50%;
-    margin-left: -2px;
-    transform-origin:50% 120px;
-}  
-
- 
 
 span.hour{
     display: inline-block;
@@ -41,13 +21,14 @@ span.hour{
 }
 
 .hour3{
-    top: 150px;
+    /* top: 150px; */
+    top: 200px;
     right: 30px;
 }
 
 .hour9{
     left: 32px;
-    top: 150px;
+    top: 200px;
 }
 
  
@@ -60,11 +41,13 @@ span.hour{
     position: absolute;
     z-index: 3;
     width: 120px;
-    height: 25px;
+    /* height: 25px; */
+    height: 30px;
     border-radius: 7px;
     background: #5f5fc4;
     text-align: center;
-    line-height: 25px;
+    line-height:30px;
+    /* line-height: 25px; */
     color: #fff; 
     left: 50%; 
     margin-left: -60px;
@@ -77,10 +60,12 @@ span.hour{
  
 .clockDate{
     font-size: 12px;
-    top: 80px;
+    /* top: 140px; */
+    top: 30%;
 } 
 
 .clockDay{
     font-size: 14px;
-    top: 200px;
+    /* top: 280px; */
+    top: 70%;
 } 

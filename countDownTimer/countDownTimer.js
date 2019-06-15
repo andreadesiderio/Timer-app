@@ -1,18 +1,10 @@
 "use strict"
-// function showDiallines (){
-//     let diallines = document.getElementsByClassName("diallines");
-//     let analogClock = document.getElementsByClassName("analogClock")[0];
-    
-//     for (let i = 0; i < 60; i++){
-//         analogClock.innerHTML += "<div class='diallines'></div>";
-//         diallines[i].style.transform = "rotate(" + 6 * i + "deg)";
-//     }
-// }
 
 const calendar = document.getElementById("calendar");
+let countDownTimerRunning = 0;
 
 // function setCalendar() {
-  function showDayAndDat(){
+  function showDayAndDate(){
     let now = new Date();
     let year = now.getFullYear();
     let month = now.getMonth() + 1;
@@ -28,18 +20,53 @@ const calendar = document.getElementById("calendar");
 // }
 // window.addEventListener('load', preSetTimer);
 
-document.getElementById('countDownTimeSetter').addEventListener('click', calculateTimer);  
 
 
-let countDownTimerRunning = 0;
-document.getElementById('startButton').addEventListener('click', function(){
-  countDownTimerRunning = 1; calculateTimer(countDownTimerRunning); });
-
-function calculateTimer(){
-  let timer;
+function startPauseToggle(){
   if (countDownTimerRunning == 0){
-    clearInterval(timer);
+    countDownTimerRunning = 1;
+  document.getElementById("startPauseButtonText").innerHTML = 'Pause';
+  document.getElementById('startPauseButton').style.backgroundColor = 'orange';
+  // document.getElementById("stopResumeButtonText").innerHTML = 'Reset';
+  // document.getElementById('stopResumeButton').style.backgroundColor = 'red';
+  // document.getElementById('startPauseButton').style.borderColor = 'red';
+  calculateTimer(countDownTimerRunning); 
   }
+  else if (countDownTimerRunning == 1){
+    countDownTimerRunning = 0;
+    calculateTimer(countDownTimerRunning); 
+  document.getElementById("startPauseButtonText").innerHTML = 'Resume';
+  document.getElementById('startPauseButton').style.backgroundColor = 'green';
+  document.getElementById("stopResumeButtonText").innerHTML = 'Reset';
+  document.getElementById('stopResumeButton').style.backgroundColor = 'red';  
+  }
+}
+
+document.getElementById('startPauseButton').addEventListener('click', startPauseToggle);
+
+// document.getElementById('startButton').addEventListener('click', function(){
+//   countDownTimerRunning = 1; calculateTimer(countDownTimerRunning); });
+
+function activateStartButton(){
+  if (countDownTimerRunning == 0){
+    document.getElementById("startPauseButtonText").innerHTML = 'Start';
+    document.getElementById('startPauseButton').style.backgroundColor = 'green';
+    document.getElementById("stopResumeButtonText").innerHTML = 'Stop';
+    document.getElementById('stopResumeButton').style.backgroundColor = 'red';
+  }
+}
+
+
+function calculateTimer(countDownTimerRunning){
+  let timer;
+  clearInterval(timer);
+  console.log('clculate');
+  // console.log(countDownTimerRunning);
+  // if (countDownTimerRunning == 0){
+  //   alert("hey");
+  //   clearInterval(timer);
+  //   return;
+  // }
     let timerDate = calendar.value.toString().split("-");
     let timerYear = timerDate[0];
     let timerMonth = timerDate[1] - 1;
@@ -67,6 +94,7 @@ function calculateTimer(){
     let hour = minute * 60; 
     let day = hour * 24;   
     function runTimer(){
+      console.log('runTimer');
       let startTime = new Date();
       let remain = deadline - startTime;
       let days = Math.round(remain / day);
@@ -83,19 +111,38 @@ function calculateTimer(){
         let background = document.getElementById("background");
         background.style.width =  `${100000 / remain}%`;
         background.style.height =  `${100000 / remain}%`;
-        
-        if (remain < 0){
-          countDownTimerRunning = 0;
+        if (countDownTimerRunning == 0 || remain < 0){
           clearInterval(timer);
-          document.getElementById("timerValue").innerHTML = "Time's Up!";
           return;
         }
+        // if (remain < 0){
+        //   // countDownTimerRunning = 0;
+        //   clearInterval(timer);
+        //   document.getElementById("timerValue").innerHTML = "Time's Up!";
+        //   return;
+        // }
+        
      }
      runTimer();
-     if (countDownTimerRunning == 1){
+    //  if (countDownTimerRunning == 0){
+    //   clearInterval(timer);
+    // }
+    if (countDownTimerRunning == 1){
       timer = setInterval(runTimer, 1000);
     }
+    console.log("endCalc");
+    //  if (countDownTimerRunning == 1){
+    //   timer = setInterval(runTimer, 1000);
+    // }
+    // if (countDownTimerRunning == 0){
+    //   clearInterval(timer);
+    // }
 }
+
+document.getElementById('countDownTimeSetter').addEventListener('click', function(){
+  activateStartButton(), calculateTimer()});  
+
+
        //timer = setInterval(runTimer, 1000); 
       //  document.getElementById('startButton').addEventListener('click', function(){alert("hi"); timer = setInterval(runTimer, 1000)} )
     

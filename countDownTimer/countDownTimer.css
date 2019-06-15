@@ -73,12 +73,12 @@ input{
     width: 60px;
     position: absolute;
 }
-#startPauseButton{
+#startPauseButtonContainer{
     left: 39.5%;
     /* top: 30%; */
     transform: rotate(-45deg);
 }
- #stopResumeButton{
+ #stopResumeButtonContainer{
     left: 57%;
     /* top: 30%; */
     transform: rotate(45deg);

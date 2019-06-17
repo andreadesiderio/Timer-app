@@ -4,7 +4,7 @@ const calendar = document.getElementById("calendar");
 let countDownTimerRunning = 0;
 
 // function setCalendar() {
-  function showDayAndDate(){
+  function setCalendar(){
     let now = new Date();
     let year = now.getFullYear();
     let month = now.getMonth() + 1;
@@ -18,7 +18,7 @@ let countDownTimerRunning = 0;
 //     // showDiallines();
 //     setCalendar();
 // }
-// window.addEventListener('load', preSetTimer);
+ window.addEventListener('load', setCalendar);
 
 
 
@@ -27,13 +27,11 @@ function startPauseToggle(){
     countDownTimerRunning = 1;
   document.getElementById("startPauseButtonText").innerHTML = 'Pause';
   document.getElementById('startPauseButton').style.backgroundColor = 'orange';
-  // document.getElementById("stopResumeButtonText").innerHTML = 'Reset';
-  // document.getElementById('stopResumeButton').style.backgroundColor = 'red';
-  // document.getElementById('startPauseButton').style.borderColor = 'red';
   calculateTimer(countDownTimerRunning); 
   }
   else if (countDownTimerRunning == 1){
     countDownTimerRunning = 0;
+    console.log("pause");
     calculateTimer(countDownTimerRunning); 
   document.getElementById("startPauseButtonText").innerHTML = 'Resume';
   document.getElementById('startPauseButton').style.backgroundColor = 'green';
@@ -60,13 +58,8 @@ function activateStartButton(){
 function calculateTimer(countDownTimerRunning){
   let timer;
   clearInterval(timer);
-  console.log('clculate');
+  console.log('clculate ' + countDownTimerRunning);
   // console.log(countDownTimerRunning);
-  // if (countDownTimerRunning == 0){
-  //   alert("hey");
-  //   clearInterval(timer);
-  //   return;
-  // }
     let timerDate = calendar.value.toString().split("-");
     let timerYear = timerDate[0];
     let timerMonth = timerDate[1] - 1;
@@ -93,7 +86,7 @@ function calculateTimer(countDownTimerRunning){
     let minute = second * 60; 
     let hour = minute * 60; 
     let day = hour * 24;   
-    function runTimer(){
+    function runTimer(countDownTimerRunning){
       console.log('runTimer');
       let startTime = new Date();
       let remain = deadline - startTime;
@@ -111,37 +104,37 @@ function calculateTimer(countDownTimerRunning){
         let background = document.getElementById("background");
         background.style.width =  `${100000 / remain}%`;
         background.style.height =  `${100000 / remain}%`;
-        if (countDownTimerRunning == 0 || remain < 0){
+        console.log("runtimer " + countDownTimerRunning);
+         if (countDownTimerRunning == 0){
+          // if (remain < 0){
+          // countDownTimerRunning = 0;
+             console.log('remain=o');
           clearInterval(timer);
+          document.getElementById("timerValue").innerHTML = "Time's Up!";
           return;
         }
-        // if (remain < 0){
-        //   // countDownTimerRunning = 0;
-        //   clearInterval(timer);
-        //   document.getElementById("timerValue").innerHTML = "Time's Up!";
-        //   return;
-        // }
         
      }
-     runTimer();
-    //  if (countDownTimerRunning == 0){
-    //   clearInterval(timer);
-    // }
-    if (countDownTimerRunning == 1){
-      timer = setInterval(runTimer, 1000);
-    }
+    //  runTimer(countDownTimerRunning);
     console.log("endCalc");
-    //  if (countDownTimerRunning == 1){
-    //   timer = setInterval(runTimer, 1000);
+     if (countDownTimerRunning == 1){
+      console.log(countDownTimerRunning);
+      timer = setInterval(runTimer, 3000);
+     }
+    
+    // else {
+    //   countDownTimerRunning = 0;
+    //    clearInterval(timer);
+    //   runTimer(countDownTimerRunning);
     // }
-    // if (countDownTimerRunning == 0){
+  }
+    // if (countDownTimerRunning ==/ 0){
     //   clearInterval(timer);
     // }
-}
+
 
 document.getElementById('countDownTimeSetter').addEventListener('click', function(){
   activateStartButton(), calculateTimer()});  
-
 
        //timer = setInterval(runTimer, 1000); 
       //  document.getElementById('startButton').addEventListener('click', function(){alert("hi"); timer = setInterval(runTimer, 1000)} )
